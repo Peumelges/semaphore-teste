@@ -1,0 +1,12 @@
+--- 
+- name: Playbook teste
+  become: true
+  hosts: all
+
+  tasks:
+  - name: ensure docker is installed
+    apt:
+      name: docker.oi
+      state: present
+      update_cache: true
+      
