@@ -8,9 +8,8 @@
     apt:
       update_cache: yes
       
-  tasks:
-    - name: Update and upgrade all packages
-      apt:
-        update_cache: yes
-        upgrade: dist
+  - name: Update and upgrade all packages
+    apt:
+      update_cache: yes
+      upgrade: dist
       
