@@ -7,5 +7,10 @@
   - name: check for updates
     apt:
       update_cache: yes
-
+      
+  tasks:
+    - name: Update and upgrade all packages
+      apt:
+        update_cache: yes
+        upgrade: dist
       
