@@ -1,0 +1,8 @@
+- name: Reboot MGC VM instance
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Reboot virtual machine
+      command: >
+        mgc virtual-machine instances reboot "{{ lookup('env','VM_INSTANCE_ID') }}"
