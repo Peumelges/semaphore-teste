@@ -6,3 +6,8 @@
   tasks:
   - name: Reboot virtual machine
     command: mgc virtual-machine instances reboot "{{VM_INSTANCE_ID}}"
+    register: reboot_result
+
+  - name: Show command output
+    debug:
+      var: reboot_result
