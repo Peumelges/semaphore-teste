@@ -4,8 +4,17 @@
   gather_facts: yes
 
   tasks:
-  - name: Reboot virtual machine
-    command: mgc virtual-machine instances reboot "{{VM_INSTANCE_ID}}"
+  - name: Reboot virtual machine Senac
+    command: mgc virtual-machine instances reboot "{{VM_INSTANCE_ID_senac}}"
+    register: reboot_result
+
+  - name: Show command output
+    debug:
+      var: reboot_result
+      
+  tasks:
+  - name: Reboot virtual machine Gtfoods
+    command: mgc virtual-machine instances reboot "{{VM_INSTANCE_ID_gtfoods}}"
     register: reboot_result
 
   - name: Show command output
