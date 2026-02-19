@@ -1,5 +1,5 @@
 - name: Reboot MGC VM instance
-  hosts: localhost
+  hosts: all
   gather_facts: no
 
   tasks:
