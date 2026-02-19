@@ -4,6 +4,6 @@
   gather_facts: no
 
   tasks:
-    - name: Reboot virtual machine
-      command: >
+  - name: Reboot virtual machine
+        command: >
         mgc virtual-machine instances reboot "{{ lookup('env','VM_INSTANCE_ID') }}"
