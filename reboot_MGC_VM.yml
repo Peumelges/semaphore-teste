@@ -8,7 +8,7 @@
     command: mgc virtual-machine instances reboot "{{VM_INSTANCE_ID_senac}}"
     register: reboot_result
 
-  - name: Show command output
+  - name: Resultado Senac
     debug:
       var: reboot_result
       
@@ -16,6 +16,6 @@
     command: mgc virtual-machine instances reboot "{{VM_INSTANCE_ID_gtfoods}}"
     register: reboot_result
 
-  - name: Show command output
+  - name: Resultado Gtfoods
     debug:
       var: reboot_result
