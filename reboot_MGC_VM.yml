@@ -1,7 +1,7 @@
 ---
 - name: Reboot MGC VM instance
   hosts: all
-  gather_facts: no
+  gather_facts: yes
 
   tasks:
   - name: Reboot virtual machine
