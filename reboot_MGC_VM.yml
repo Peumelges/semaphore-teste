@@ -5,4 +5,4 @@
 
   tasks:
   - name: Reboot virtual machine
-        command: mgc virtual-machine instances reboot 123
+    command: mgc virtual-machine instances reboot 123
