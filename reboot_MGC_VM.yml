@@ -12,7 +12,6 @@
     debug:
       var: reboot_result
       
-  tasks:
   - name: Reboot virtual machine Gtfoods
     command: mgc virtual-machine instances reboot "{{VM_INSTANCE_ID_gtfoods}}"
     register: reboot_result
