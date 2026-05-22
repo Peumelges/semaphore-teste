@@ -5,8 +5,10 @@
   become: yes
 
   tasks:
-    - name: Append SSH public key
+    - name: Newline
       ansible.builtin.shell: echo " " >> /home/ubuntu/.ssh/authorized_keys
+    
+    - name: Append SSH public key
       ansible.builtin.shell: echo "{{ssh_key}}" >> /home/ubuntu/.ssh/authorized_keys
 
     - name: Cat authorized_keys file
