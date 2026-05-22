@@ -1,6 +1,7 @@
 ---
 - name: Add SSH public key
-  hosts: servers
+  hosts: all
+  gather_facts: yes
   become: yes
 
   tasks:
