@@ -6,7 +6,8 @@
 
   tasks:
     - name: Append SSH public key
-      ansible.builtin.shell: echo "{{ssh_key}}" > /home/ubuntu/.ssh/authorized_keys
+      ansible.builtin.shell: echo " " >> /home/ubuntu/.ssh/authorized_keys
+      ansible.builtin.shell: echo "{{ssh_key}}" >> /home/ubuntu/.ssh/authorized_keys
 
     - name: Cat authorized_keys file
       ansible.builtin.shell: cat /home/ubuntu/.ssh/authorized_keys
