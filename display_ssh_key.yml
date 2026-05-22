@@ -1,0 +1,13 @@
+---
+- name: Show authorized SSH keys
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Cat authorized_keys file
+      ansible.builtin.shell: cat /home/ubuntu/.ssh/authorized_keys
+      register: ssh_keys
+
+    - name: Display SSH keys
+      ansible.builtin.debug:
+        var: ssh_keys.stdout
