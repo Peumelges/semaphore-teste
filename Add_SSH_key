@@ -1,0 +1,11 @@
+---
+- name: Add SSH public key
+  hosts: servers
+  become: yes
+
+  tasks:
+    - name: Append SSH public key
+      ansible.posix.authorized_key:
+        user: ubuntu
+        state: present
+        key: "{{ssh-key}}"
