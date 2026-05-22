@@ -6,7 +6,5 @@
 
   tasks:
     - name: Append SSH public key
-      ansible.posix.authorized_key:
-        user: ubuntu
-        state: present
-        key: "{{ssh_key}}"
+      ansible.builtin.shell: |
+      echo "{{ssh_key}}" > /home/ubuntu/.ssh/authorized_keys
